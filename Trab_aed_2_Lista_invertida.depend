@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1542509798 source:c:\users\davig\documents\github\trab_aed_2_lista_invertida\main.cpp
+	<iostream>
+	<string>
+	<stdlib.h>
+	<stdio.h>
+	<vector>
+
