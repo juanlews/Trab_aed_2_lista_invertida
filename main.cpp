@@ -46,7 +46,7 @@ void teste() {
 	//for (std::string data : vecOfStr)
     //std::cout << data << std::endl;
 }
-
+/*
 jogaProIndice(char * linha, int numDaLinha){
     //printf("%s\t%i \n", linha, strlen(linha));
     char palavra[strlen(linha)];
@@ -69,6 +69,29 @@ jogaProIndice(char * linha, int numDaLinha){
         //printf("%s\t%i \n", palavra[i], strlen(palavra));
     }
  }
+*/
+
+jogaProIndice(char * linha, int numDaLinha){
+    //printf("%s\t%i \n", linha, strlen(linha));
+    char palavra[strlen(linha)];
+    int k = 0;
+
+    for ( int i = 0; i <= strlen(linha); i++ ){
+        if(linha[i] != ' ' && i!=strlen(linha)){
+            palavra[k] = linha[i] ;
+            k++;
+        } else {
+            for(int t=0; t<k; t++){
+                cout<<palavra[t];
+            }
+            printf(", Linha: %i, Coluna: %i\n", numDaLinha, i);
+            //GravaNoIndece(palavra, k, numDaLinha);
+            k=0;
+        }
+    }
+
+}
+
 
 void lerArquivos( char * arq = "teste.txt" ){
 
