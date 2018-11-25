@@ -24,12 +24,13 @@ void criaIndices(char * palavra){
 
 
 void gravaNoIndice(char * palavra, int tam, int col, int numDaLinha){
-     printf(", Fim da palavra: %i Inicio da palavra: %i tamanho da palavra: %i ",
+     printf(", Fim da palavra: %i Inicio da palavra: %i tamanho da palavra: %i \n",
                             col,                  (col - tam), (tam));
+
 
 }
 
-jogaProIndice(char * linha, int numDaLinha){
+void jogaProIndice(char * linha, int numDaLinha){
     //printf("%s\t%i \n", linha, strlen(linha));
     char palavra[strlen(linha)];
     int k = 0;
