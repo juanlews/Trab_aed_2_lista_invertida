@@ -23,9 +23,10 @@ void criaIndices(char * palavra){
 }
 
 
-void gravaNoIndice(char * palavra, int pos, int col, int numDaLinha){
-    cout << "Pos da palavra: "<< (strlen(palavra) - pos) << " tamanho da palavra: " << (strlen(palavra)) << " coluna: "<< col<< endl;
-    //printf("%i", strlen(palavra) );
+void gravaNoIndice(char * palavra, int tam, int col, int numDaLinha){
+     printf(", Fim da palavra: %i Inicio da palavra: %i tamanho da palavra: %i ",
+                            col,                  (col - tam), (tam));
+
 }
 
 jogaProIndice(char * linha, int numDaLinha){
@@ -34,14 +35,14 @@ jogaProIndice(char * linha, int numDaLinha){
     int k = 0;
 
     for ( int i = 0; i <= strlen(linha); i++ ){
-        if(linha[i] != ' ' && i!=strlen(linha)){
+        if(linha[i] != ' ' && i != strlen(linha)){
             palavra[k] = linha[i] ;
             k++;
         } else {
             for(int t=0; t<k; t++){
                 cout << palavra[t];
             }
-            printf(", Linha: %i, Coluna: %i ", numDaLinha, i);
+
             gravaNoIndice(palavra, k, i, numDaLinha);
             k=0;
         }
