@@ -23,7 +23,7 @@ void criaIndices(char * palavra){
 }
 
 void teste() {
-	// Creating a vector of int;
+	/* Creating a vector of int;
 	std::vector<std::string> vecOfStr;
 
 	std::cout << "Size of Vector = " << vecOfStr.size() << std::endl;
@@ -44,8 +44,9 @@ void teste() {
 
 	// Now lets print the content of vector,
 	//for (std::string data : vecOfStr)
-    //std::cout << data << std::endl;
+    //std::cout << data << std::endl;*/
 }
+
 /*
 jogaProIndice(char * linha, int numDaLinha){
     //printf("%s\t%i \n", linha, strlen(linha));
@@ -70,6 +71,10 @@ jogaProIndice(char * linha, int numDaLinha){
     }
  }
 */
+void gravaNoIndece(char * palavra, int pos, int numDaLinha){
+    cout << "Pos da palavra: "<< (pos) << " tamanho da palavra: " << (strlen(palavra))<< endl;
+    //printf("%i", strlen(palavra) );
+}
 
 jogaProIndice(char * linha, int numDaLinha){
     //printf("%s\t%i \n", linha, strlen(linha));
@@ -82,16 +87,14 @@ jogaProIndice(char * linha, int numDaLinha){
             k++;
         } else {
             for(int t=0; t<k; t++){
-                cout<<palavra[t];
+                cout << palavra[t];
             }
             printf(", Linha: %i, Coluna: %i\n", numDaLinha, i);
-            //GravaNoIndece(palavra, k, numDaLinha);
+            gravaNoIndece(palavra, k, numDaLinha);
             k=0;
         }
     }
-
 }
-
 
 void lerArquivos( char * arq = "teste.txt" ){
 
