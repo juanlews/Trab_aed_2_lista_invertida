@@ -35,24 +35,28 @@ void gravaNoIndice(const char * palavra, int tam, int col, int numDaLinha, char 
     char xablau[2048];
 
     if(arqIndex){
-        fscanf( arqIndex, "%[^<]<", &indice );
-        //cout<< " " << strcmp(indice, palavra);
+        fscanf( arqIndex, "%[^\s+ <]<", &indice );
         while( !feof(arqIndex) ){
             if( !feof(arqIndex) ){
+                //cout<<strcmp(indice, palavra);
+                if( strcmp(indice, palavra) == 0){
 
-                if(strcmp(indice, palavra) == 1){
-                    cout <<" " << indice <<" = "<< palavra << " ";
+                    //cout <<indice <<"="<< palavra;
                     finded = true;
+                    break;
                     fscanf(arqIndex, "%[^\n]\n", &xablau);
                     //cout << " on "<< xablau << " " ;
                     break;
 
                 } else {
+                    //cout << indice;
                     fscanf(arqIndex, "%[^\n]\n", &xablau);
                     //cout << " " << xablau;
-                    fscanf( arqIndex, "%[^<]<", &indice );
+                    fscanf( arqIndex, "%[^\s+ <]<", &indice );
+                    cout<<indice;
                     //cout<<strcmp(indice, palavra);
-                    cout <<" indice: " << indice;
+
+
 
                 }
             }
@@ -60,7 +64,7 @@ void gravaNoIndice(const char * palavra, int tam, int col, int numDaLinha, char 
     }
 
     fclose(arqIndex);
-   /* if(!finded){
+    if(!finded){
         int test;
         string toSave = "";
         stringstream convertNumLin, convertWord;
@@ -71,13 +75,13 @@ void gravaNoIndice(const char * palavra, int tam, int col, int numDaLinha, char 
         convertWord << (col - tam);
         toSave.append(convertNumLin.str()+", "+ convertWord.str()+">\n");
         //----------------------------------------------------------------
-        //cout << endl<< toSave <<endl;
+        cout << endl<< toSave <<endl;
         fflush(stdin);
         std::ofstream out;
         out.open( "teste.indice", std::ios::app);
         out << toSave.c_str();
         out.close();
-    }*/
+    }
 }
 
 void jogaProIndice(char * linha, int numDaLinha){
