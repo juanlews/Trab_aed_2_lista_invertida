@@ -6,10 +6,12 @@
 	<stdio.h>
 	<vector>
 
-1543169121 source:c:\users\juanl\documents\github\trab_aed_2_lista_invertida\main.cpp
+1543196313 source:c:\users\juanl\documents\github\trab_aed_2_lista_invertida\main.cpp
 	<iostream>
 	<string.h>
 	<stdlib.h>
 	<stdio.h>
 	<vector>
+	<fstream>
+	<sstream>
 
